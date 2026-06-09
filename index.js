@@ -128,7 +128,11 @@ function generateBaseValue(definition, record) {
     case 'vn.fullName': return faker.person.fullName();
     case 'vn.firstName': return faker.person.firstName();
     case 'vn.lastName': return faker.person.lastName();
-    case 'vn.email': return `${dependency || slugify(faker.person.fullName())}@${definition.domain || 'gmail.com'}`;
+    case 'vn.email': {
+      const localPart = dependency || slugify(faker.person.fullName());
+      const uniqueSuffix = definition.unique ? `.${randomDigits(4)}` : '';
+      return `${localPart}${uniqueSuffix}@${definition.domain || 'gmail.com'}`;
+    }
     case 'vn.phone': return `${faker.helpers.arrayElement(MOBILE_PREFIXES)}${randomDigits(7)}`;
     case 'vn.nationalId': return generateNationalId();
     case 'vn.address.full': return faker.location.streetAddress({ useFullAddress: true });
