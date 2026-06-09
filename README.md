@@ -22,7 +22,7 @@ A powerful Vietnamese mock data generator built with Node.js. Generates realisti
 ## Installation
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/ThanhTug077/mock-data-generator-vn.git
 cd mock-data-generator-vn
 npm install
 ```
