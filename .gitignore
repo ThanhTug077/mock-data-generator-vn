@@ -1,0 +1,5 @@
+node_modules/
+outputs/
+*.jsonl
+mock_data_export.json
+report.json
