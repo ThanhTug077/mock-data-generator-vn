@@ -4,8 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node index.js --test",
-    "demo": "node index.js --demo"
+    "test": "node index.js --test"
   },
   "dependencies": {
     "@faker-js/faker": "^10.1.0",
